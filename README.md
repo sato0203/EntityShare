@@ -70,23 +70,23 @@ namespace API.Model
 - Typescirpt Source
 ```
 export interface Article {
-	Id:number
-	User:User
-	Shop:Shop
-	Text:string
-	ImageURL:string
+	id:number
+	user:User
+	shop:Shop
+	text:string
+	imageURL:string
 }
 
 export interface Shop {
-	Id:number
-	Name:string
-	Latitude:number
-	Longitude:number
+	id:number
+	name:string
+	latitude:number
+	longitude:number
 }
 
 export interface User {
-	Id:number
-	Name:string
+	id:number
+	name:string
 }
 
 ```

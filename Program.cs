@@ -82,7 +82,11 @@ namespace EntityShare
                     isOpen = false;
             }
 
-            return newTokens.Where(token => token.IsKind(SyntaxKind.IdentifierToken)).Last().Text;
+            var name = newTokens.Where(token => token.IsKind(SyntaxKind.IdentifierToken)).Last().Text;
+            //return name;
+            var firstOfName = new String(new char[] { name.First() }).ToLower();
+            var tailName = new String(name.ToCharArray().Skip(1).ToArray());
+            return (firstOfName + tailName);
         }
         public static string FindPropertyType(SyntaxNode propertyNode){
             var shouldRemoveNodes = new List<SyntaxNode>();
